@@ -16,7 +16,6 @@ module.exports = {
       new webpack.container.ModuleFederationPlugin({
         remoteType: "var",
         remotes: {
-          plasmic_components: "plasmic_components",
           cards: "cards",
         },
         shared: {
