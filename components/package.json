@@ -16,8 +16,11 @@
     "clean": "rm -rf dist",
     "cleanPackage": "json -I -f ./package.json -e 'delete this.author && delete this.repository && delete this.scripts && delete this.devDependencies && delete this.sideEffects'",
     "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack --config webpack.config.dev.js",
     "prepublishOnly": "yarn run build && && cleanPackage && git reset --hard",
-    "start": "webpack-dev-server --config ./webpack.config.dev.js"
+    "start": "webpack-dev-server --config ./webpack.config.dev.js",
+    "plasmic:install": "yarn global add @plasmicapp/cli",
+    "plasmic:sync": "plasmic sync --projects 5HtheWr3yMMCoFXwAWsWcN"
   },
   "peerDependencies": {
     "react": "^16.9.0",
@@ -72,5 +75,8 @@
   "sideEffects": [
     "**/*.css",
     "**/*.scss"
-  ]
+  ],
+  "dependencies": {
+    "@plasmicapp/react-web": "^0.2.90"
+  }
 }

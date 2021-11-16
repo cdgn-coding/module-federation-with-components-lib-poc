@@ -9,7 +9,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', 'jsx'],
     alias: {
       react: path.resolve('./node_modules/react')
     }
